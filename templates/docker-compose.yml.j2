@@ -4,7 +4,7 @@ services:
     image: {{ image }}
     container_name: myapp1
     working_dir: /jarry/etc
-    command: java -jar /jar/myapp1-{{ version }}-SNAPSHOT.jar --spring.config.location=file:/etc/application.properties
+    command: java -jar /jar/myapp1-{{ version }}.jar --spring.config.location=file:/etc/application.properties
     volumes:
     - /jarry/etc/application.properties:/etc/application.properties
     ports:
