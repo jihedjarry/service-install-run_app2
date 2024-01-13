@@ -1,14 +1,9 @@
 version: '3.0'
 services:
   myapp1:
-    image: {{ image }}
-    container_name: myapp1
-    working_dir: /jarry/etc
-    command: java -jar /jar/myapp1-{{ version }}.jar --spring.config.location=file:/etc/application.properties
-    volumes:
-    - /jarry/etc/application.properties:/etc/application.properties
+    image: {{ service_install_run_image }}
+    container_name: myapp2
     ports:
-    - 8080:8080
-
+    - 80:5000
 
 
